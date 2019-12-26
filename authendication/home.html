@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Prociono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+  <link href="https://fonts.googleapis.com/css?family=Abel|Bitter&display=swap" rel="stylesheet"> 
+  <style>
+      
+       .font{
+        font-family: 'Prociono', serif;
+        font-size: 20px;
+        color: black;
+       }
+      .con{
+         margin-top: 100px;
+         font-family: 'Bitter', serif;
+         font-size: 50px;
+       }
+       .con1{
+        margin-top: 30px;
+         font-family: 'Bitter', serif;
+         font-size: 20px;
+       }
+       .fa{
+           font-size: 100px;
+           margin-left: 400px;
+           margin-top: 50px;
+       }
+       .bg{
+           background-image: url("img1.jpg");          
+           background-repeat: no-repeat;
+           background-size: cover;
+       }
+       .bg1{
+           background-image: url(img6.png);
+           background-repeat: no-repeat;
+           background-size: cover;
+       }
+       .details{
+        font-family: 'Bitter', serif;
+       }
+      
+       .form-group{
+           margin-top:50px ;
+       }
+       
+       .btn{
+           width: 300px;
+           margin-left: 160px;
+           
+       }
+    </style>
+    <script>
+    function logout(){
+        sessionStorage.removeItem("loginID");
+        var log= sessionStorage.getItem("loginID");
+         if(!log){
+       window.location="login.html"; 
+   }
+     }
+     </script>
+</head>
+<body>
+    <div class="container-fluid  bg ">
+        <nav class = "navbar navbar-default" role = "navigation">
+            <div class = "navbar-header">
+                <a href="https://kuriyam.io/"><img class="ml-5 logo" src="kuriyam.png" width="90px"; height="100px"></a>
+            </div>           
+            <div>
+               <p class = "navbar-text navbar-right">
+                   <a href="#" class="navbar-link mr-5 font">HOME</a>
+                   <a href="#" class="navbar-link mr-5 font">PROJECT DETAILS</a>
+                  <a href = "#" class = "navbar-link font">LOGOUT</a>
+               </p>
+            </div>
+         </nav> 
+
+         
+             <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                <p class="text-center con ">GET START TO CREATE YOUR PROJECT.<br>CLICK BELOW</p>
+                <a href=""><i class="fa fa-angle-double-down "></i></a>
+                </div>
+                <div class="col-2"></div>
+             </div>
+         </div> 
+         <div class="container-fluid">
+            <div class="row ">   
+                <div class="col-6 bg1"></div>
+                <div class="col-6">
+                    <p class="con1 text-center">ADD YOUR PROJECT DETAILS</p>
+                    <form onsubmit="submit();return false">                   
+                        <label class="details"> USER NAME:</label><input type="text" class="form-control w-50 " id="name" placeholder="user name"><br>
+                        <label class="details"> PROJECT NAME:</label><input type="text" class="form-control w-50" id="name" placeholder="user name"><br>
+                      <label class="details"> PHONE NUMBER:</label><input type="number" class="form-control w-50" id="name" placeholder="number"><br>
+                        <label class="details"> EMAIL:</label><input type="email" class="form-control w-50" id="name" placeholder="email"><br>
+                        <label class="details"> END DATE:</label><input type="date" class="form-control w-50" id="name" placeholder="">
+                        
+                        <button type="submit"  class="btn btn-primary btn-block mt-3 ">CREATE</button>
+                    </form>   
+                </div>           
+                              
+            </div>
+         </div>
+</body>
+</html>

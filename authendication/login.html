@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <title>LOGIN</title>
+    <script src="action.js"></script>
+    <style>
+    
+    .con{
+        border: 1px ;
+        height: 500px;
+        align-items: center;
+        width: 400px;
+        margin: auto;
+        padding:10px;
+        margin-top: 50px;
+      
+    }
+    .head{
+        font-family: 'Anton', sans-serif;
+        font-size: 45px;
+        text-align: center;
+    }
+    .center{
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+    }
+    body{
+        background-image: url("bg1.jpg");
+    }
+    
+
+
+    </style>
+   
+
+</head>
+<body >
+   <div class="con">
+       <form class="con1" id="form1" onsubmit="validate(); return false">
+       <p class="head">LOGIN</p><br>
+        <input type="email" class="form-control" id="id" placeholder="email"><br>
+        <input type="password" class="form-control" id="pas" placeholder="password"><br>
+        <div class="checkbox">
+            <label ><input type="checkbox" > Remember me</label>
+        </div>
+        <button type="submit" onclick="log()" class="btn btn-primary btn-block">LOGIN</button>
+        <button type="submit" onclick="reg()" class="btn btn-primary btn-block">Register</button><br>
+        
+            </form>
+        
+
+        <form class="con" id="form2" onsubmit="feed();return false" style="display: none;">
+            <p class="head">REGISTER</p><br>
+             <input type="text" class="form-control" id="name" placeholder="USER NAME"><br>
+             <input type="email" class="form-control" id="mail" placeholder="email"><br>
+             <input type="password" class="form-control" id="pass" placeholder="password"><br>
+             
+             <button type="submit"  onclick="reg()" class="btn btn-primary btn-block">Register</button><br>
+             <button type="submit" onclick="log()" class="btn btn-primary btn-block">LOGIN</button>
+             </form>
+    </div>
+
+    
+</body>
+</html>
